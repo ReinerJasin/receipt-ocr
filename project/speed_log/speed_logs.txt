@@ -1,0 +1,22 @@
+
+pipeline = PaddleOCRVL(
+    use_doc_orientation_classify=False,
+    use_doc_unwarping=False,
+    use_layout_detection=True,
+    device="cpu",
+    precision="fp32"
+)
+
+RESULT with FP32:
+[TIMER] Model loading time: 17.274 seconds
+[TIMER] Prediction time: 344.117 seconds
+[TIMER] Print result: 0.013 seconds
+[TIMER] Save JSON: 0.011 seconds
+[TIMER] Save Markdown: 0.007 seconds
+
+RESULT with FP16:
+[TIMER] Model loading time: 16.650 seconds
+[TIMER] Prediction time:  seconds
+[TIMER] Print result:  seconds
+[TIMER] Save JSON:  seconds
+[TIMER] Save Markdown:  seconds
