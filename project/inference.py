@@ -16,9 +16,8 @@ t_model_start = time.perf_counter()
 pipeline = PaddleOCRVL(
     use_doc_orientation_classify=False,
     use_doc_unwarping=False,
-    use_layout_detection=True,
-    device="cpu",
-    precision="fp16"
+    use_layout_detection=False,
+    device="cpu"
 )
 
 t_model_end = time.perf_counter()
@@ -27,7 +26,7 @@ print(f"[TIMER] Model loading time: {t_model_end - t_model_start:.3f} seconds")
 # STEP 2: DOING PREDICTION
 t_pred_start = time.perf_counter()
 
-output = pipeline.predict("/Users/reiner/Downloads/sample_receipt.jpeg")
+output = pipeline.predict("/Users/reiner/Documents/GitHub/receipt-ocr/input/sample_receipt_20260109_180200.jpeg")
 
 t_pred_end = time.perf_counter()
 print(f"[TIMER] Prediction time: {t_pred_end - t_pred_start:.3f} seconds")
@@ -46,7 +45,7 @@ for res in output:
     # SAVE JSON
     t_json_start = time.perf_counter()
     
-    res.save_to_json(save_path="output")
+    res.save_to_json(save_path="output/json")
     
     t_json_end = time.perf_counter()
     print(f"[TIMER] Save JSON: {t_json_end - t_json_start:.3f} seconds")
@@ -54,7 +53,7 @@ for res in output:
     # SAVE AS MARKDOWN
     t_md_start = time.perf_counter()
     
-    res.save_to_markdown(save_path="output") 
+    res.save_to_markdown(save_path="output/markdown") 
     
     t_md_end = time.perf_counter()
     print(f"[TIMER] Save Markdown: {t_md_end - t_md_start:.3f} seconds")
