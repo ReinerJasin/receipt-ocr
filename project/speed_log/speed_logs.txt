@@ -20,3 +20,10 @@ RESULT with FP16:
 [TIMER] Print result:  seconds
 [TIMER] Save JSON:  seconds
 [TIMER] Save Markdown:  seconds
+
+RESULT without layout detection:
+[TIMER] Model loading time: 18.751 seconds
+[TIMER] Prediction time: 292.408 seconds
+[TIMER] Print result: 0.003 seconds
+[TIMER] Save JSON: 0.005 seconds
+[TIMER] Save Markdown: 0.001 seconds
