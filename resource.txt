@@ -1,0 +1,11 @@
+PaddleOCR-VL github:
+https://github.com/PaddlePaddle/PaddleOCR/
+
+PaddleOCR-VL docs:
+https://www.paddleocr.ai/latest/en/version3.x/pipeline_usage/OCR.html
+
+PaddleOCR-VL huggingface:
+https://huggingface.co/PaddlePaddle/PaddleOCR-VL/
+
+PaddleOCR-VL + OpenVINO by Zhaohb:
+https://github.com/zhaohb/paddleocr_vl_ov/tree/main
